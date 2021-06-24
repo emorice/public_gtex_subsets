@@ -161,16 +161,12 @@ rule download_gex:
                 try:
                     batch = reader.read_next_batch()
                     writer.write(batch)
-                    #chunk = reader.get_chunk(1000)
-                    #table = pa.Table.from_pandas(chunk)
-                    #writer.write(table)
                 except StopIteration:
                     break
                 i += 1
 
         text.close()
         res.close()
-
 
 rule filter_gex:
     input: "gtex.ft"
