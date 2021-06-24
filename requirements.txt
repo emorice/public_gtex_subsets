@@ -1,0 +1,4 @@
+snakemake
+pandas
+pyarrow
+tqdm
